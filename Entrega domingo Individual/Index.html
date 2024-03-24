@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link href="./Paquete/bootstrap.min.css" rel="stylesheet">
+    <link href="./Paquete/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <header class="d-flex justify-content-center py-3 mb-4 border-bottom">
+        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <span class="fs-4">Informacion general</span>
+        </a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a href="https://www.facebook.com/IdolinLopez/" class="nav-link">
+                    Facebook
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="https://www.instagram.com/lopez_idolin/" class="nav-link">
+                    Instagram
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="https://api.whatsapp.com/send?phone=+50585180717&text=Hola, idolin." class="nav-link active">
+                    WhatsApp
+                    <i class="bi-whatsapp"></i>
+                </a>
+            </li>
+        </ul>
+    </header>
+</div>
+
+<div class="container my-5">
+    <h2>Formulario de Registro</h2>
+    <form id="formulario" class="needs-validation" novalidate>
+
+        <div class="row">
+              <!-- Primera Columna -->
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fechaNacimiento" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">Dirección</label>
+                    <input type="text" class="form-control" id="direccion" required>
+                </div>
+            </div>
+
+                      <!-- Segunda Columna -->
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="ciudad" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="ciudad" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="pais" class="form-label">País</label>
+                    <select class="form-select" id="pais" required>
+                        <option selected disabled value="">Seleccione un país</option>
+                        <option>Monaco</option>
+                        <option>Gran Bretaña</option>
+                        <option>Australia</option>
+                        <option>Brazil</option>
+                        <option>Irlanda</option>
+                    </select>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="ocupacion" class="form-label">Ocupación</label>
+                    <input type="text" class="form-control" id="ocupacion" required>
+                </div>
+                <div class="mb-3">
+                    <label for="empresa" class="form-label">Empresa</label>
+                    <input type="text" class="form-control" id="empresa" required>
+                </div>
+            </div>
+
+              <!-- Tercera Columna -->
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="estadoCivil" class="form-label">Estado Civil</label>
+                    <select class="form-select" id="estadoCivil" required>
+                        <option selected disabled value="">opcion</option>
+                        <option>1.Solter@</option>
+                        <option>2.Casad@</option>
+                        <option>3.Divorciad@</option>
+                        <option>4.Viud@</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="intereses" class="form-label">Pasatiempos Favoritos</label>
+                    <textarea class="form-control" id="intereses" rows="3" required></textarea>
+                </div>
+
+                    <div class="mb-3">
+                    <label for="nivelSatisfaccion" class="form-label">Edad (1 a 100): <span id="nivelValor">3</span></label>
+                    <input type="range" class="form-range" id="nivelSatisfaccion" min="1" max="100" value="27" oninput="document.getElementById('nivelValor').textContent = this.value">
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
+</div>
+
+<script src="./Paquete/bootstrap.bundle.min.js"></script>
+<script src="./Paquete/jspdf.min.js"></script>
+<script src="./src/Formulario.js"></script>
+</body>
+</html>
